@@ -1,7 +1,7 @@
 import pytesseract
 from PIL import Image
 import PyPDF2  # Biblioteca para lidar com PDFs
-from ocr_process import Document
+from docx import Document
 
 
 def ocr_image_to_text(image_path):
@@ -37,7 +37,7 @@ def ocr_docx_to_text(docx_path):
 
 
 if __name__ == "__main__":
-    file_path = "./guia_do_exameWord.docx"
+    file_path = "imagem_examePNG.png"
 
     if file_path.lower().endswith(('.png', '.jpg', '.jpeg')):
         ocr_text = ocr_image_to_text(file_path)
